@@ -1,0 +1,143 @@
+/* --- Root Variables for Certificate Theme --- */
+:root {
+  --cert-primary-color: #f97438; /* Your vibrant orange */
+  --cert-primary-hover: #e65c00; /* Darker orange for hover */
+  --cert-bg-light: #fff7f2;      /* A very light, warm background */
+  --cert-text-dark: #2c3e50;    /* A strong, dark blue/grey for text */
+  --cert-text-light: #7f8c8d;   /* A softer grey for secondary text */
+  --cert-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+/* --- Main Certificate Panel: The Container --- */
+.certificate-panel {
+  background: linear-gradient(180deg, #ffffff, var(--cert-bg-light));
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: var(--cert-shadow);
+  border: 1px solid #f0f0f0;
+}
+
+/* Panel Title (e.g., "My Certificates") */
+.certificate-panel h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--cert-text-dark);
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--cert-primary-color);
+  display: inline-block; /* Makes the border only as long as the text */
+}
+
+/* --- Individual Certificate Card: The Star of the Show --- */
+.certificate-card {
+  display: flex;
+  align-items: center; /* Vertically align icon and text */
+  gap: 20px; /* Space between icon and text content */
+  background-color: #ffffff;
+  margin: 15px 0;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #ededed;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  /* --- BEAUTIFICATION: Smooth transition for the hover effect --- */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* --- BEAUTIFICATION: The hover effect --- */
+.certificate-card:hover {
+  transform: translateY(-5px) scale(1.01); /* Lift and slightly grow the card */
+  box-shadow: 0 10px 25px rgba(249, 116, 56, 0.15); /* A soft orange glow */
+  border-color: var(--cert-primary-color);
+}
+
+/* --- BEAUTIFICATION: A placeholder for an icon (e.g., Font Awesome) --- */
+/* To use this, you'd add <i className="certificate-icon fas fa-award"></i> */
+.certificate-icon {
+  font-size: 40px;
+  color: var(--cert-primary-color);
+  background: var(--cert-bg-light);
+  padding: 15px;
+  border-radius: 50%;
+  min-width: 40px; /* Ensures icon doesn't shrink */
+  text-align: center;
+}
+
+/* Container for the text content within a card */
+.certificate-details {
+  flex-grow: 1; /* Allows text to take up remaining space */
+}
+
+/* Certificate Title */
+.certificate-card h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--cert-text-dark);
+  margin: 0 0 5px 0; /* Cleaned up margins */
+}
+
+/* Certificate Description */
+.certificate-card p {
+  font-size: 15px;
+  color: var(--cert-text-light);
+  line-height: 1.6;
+  margin: 0 0 10px 0;
+}
+
+/* Date information */
+.certificate-card .date {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--cert-text-light);
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space for a potential calendar icon */
+}
+
+/* --- BEAUTIFICATION: A download button/link that appears on hover --- */
+/* To use this, add <a href="#" className="download-link">...</a> */
+.download-link {
+  background-color: var(--cert-primary-color);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  opacity: 0; /* Hidden by default */
+  transform: scale(0.9);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.certificate-card:hover .download-link {
+  opacity: 1; /* Becomes visible on hover */
+  transform: scale(1);
+}
+
+.download-link:hover {
+  background-color: var(--cert-primary-hover);
+}
+
+/* --- BEAUTIFICATION: The "Empty State" message --- */
+.certificate-panel .no-certificates {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: var(--cert-bg-light);
+  border: 2px dashed #e0e0e0;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.no-certificates p {
+  font-size: 18px;
+  color: var(--cert-text-light);
+  font-weight: 500;
+}
+
+/* A large, faded icon for the empty state */
+.no-certificates::before {
+  content: '📜'; /* You can use an emoji or a Font Awesome class */
+  font-size: 60px;
+  display: block;
+  margin-bottom: 20px;
+  opacity: 0.3;
+}

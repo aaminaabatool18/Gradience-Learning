@@ -1,0 +1,193 @@
+App.css
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fffaf6;
+  color: #333;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.navbar {
+  padding: 10px;
+  background-color: #f97438;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  width: 150px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.auth-buttons button {
+  background-color: #f97438;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.auth-buttons button:hover {
+  background-color: #e76228;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.cta-btn, .join-btn {
+  padding: 12px 30px;
+  border: none;
+  background-color: #f97438;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.cta-btn:hover, .join-btn:hover {
+  background-color: #d43d00;
+}
+
+.highlights {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+
+.highlight-box {
+  flex: 1;
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-box h2 {
+  font-size: 2.5rem;
+  color: #f97438;
+}
+
+.feature-boxes {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+
+.feature {
+  text-align: center;
+  flex: 1;
+  margin: 10px;
+}
+
+.feature img {
+  width: 80px;
+  height: 80px;
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background-color: white;
+  margin: 10px;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+}
+
+.footer {
+  text-align: center;
+  background-color: #f97438;
+  color: white;
+  padding: 20px;
+}
+
+.footer p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .highlights {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-boxes {
+    flex-direction: column;
+  }
+}

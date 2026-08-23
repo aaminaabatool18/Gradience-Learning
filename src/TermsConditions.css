@@ -1,0 +1,112 @@
+/* TermsConditions.css */
+.terms-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.terms-modal-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh; /* Limit the modal height */
+  overflow-y: auto; /* Add scroll to the content */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.terms-modal-content h2 {
+  margin-top: 0;
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.terms-modal-content h3 {
+  margin-top: 30px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #222;
+}
+
+.terms-modal-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.terms-modal-content a {
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.terms-modal-content a:hover {
+  text-decoration: underline;
+}
+
+.terms-modal-content .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.terms-modal-content .close-btn:hover {
+  background-color: #ff1a1a;
+}
+
+/* Style for smaller screen sizes */
+@media (max-width: 768px) {
+  .terms-modal-content {
+    padding: 20px;
+    width: 95%;
+    max-width: 100%;
+    max-height: 80vh; /* Keep the modal height limited */
+  }
+
+  .terms-modal-content h2 {
+    font-size: 24px;
+  }
+
+  .terms-modal-content h3 {
+    font-size: 20px;
+  }
+
+  .terms-modal-content p {
+    font-size: 14px;
+  }
+
+  .terms-modal-content .close-btn {
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+  }
+}

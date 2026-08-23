@@ -490,20 +490,16 @@ import {
   FaBook,
   FaCode,
   FaGamepad,
-  FaBrain,
   FaUsers,
   FaTrophy,
   FaRocket,
   FaStar,
   FaQuoteLeft,
-  FaChevronRight,
   FaGraduationCap,
   FaLightbulb,
   FaHeart,
   FaArrowRight,
   FaCheckCircle,
-  FaMoon,
-  FaSun,
 } from "react-icons/fa"
 import "./Homepage.css"
 
@@ -568,10 +564,6 @@ function Homepage() {
     }
     localStorage.setItem("darkMode", JSON.stringify(isDarkMode))
   }, [isDarkMode])
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode)
-  }
 
   useEffect(() => {
     const handleScroll = () => {

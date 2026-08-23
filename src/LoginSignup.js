@@ -453,6 +453,8 @@ const LoginSignup = () => {
       case "lastName":
         setLastName(value)
         break
+      default:
+        break
     }
 
     // Mark field as touched
@@ -812,9 +814,9 @@ const LoginSignup = () => {
                   )}
 
                   {isLogin && (
-                    <a className="forgot" href="#" onClick={toggleForgotPassword}>
+                    <button type="button" className="forgot" onClick={toggleForgotPassword}>
                       Forgot password?
-                    </a>
+                    </button>
                   )}
 
                   <button type="submit" disabled={isLoading || !isFormValid()}>

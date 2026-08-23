@@ -559,6 +559,7 @@ export default function CoursePage({ onQuizComplete }) {
 
       return () => clearInterval(interval)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeTab, selectedCourse, quizSubmitted])
 
   const handleAnswerChange = (questionIdx, selectedOption) => {

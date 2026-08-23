@@ -487,7 +487,7 @@ const Dashboard = () => {
     const saved = localStorage.getItem("userPoints")
     return saved ? Number.parseInt(saved) : 1250
   })
-  const [streak, setStreak] = useState(() => {
+  const [streak] = useState(() => {
     const saved = localStorage.getItem("userStreak")
     const lastLogin = localStorage.getItem("lastLoginDate")
     const today = new Date().toDateString()
@@ -644,6 +644,7 @@ const Dashboard = () => {
     if (Object.keys(initialProgress).length > 0) {
       setCourseProgress((prev) => ({ ...prev, ...initialProgress }))
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   // Save data to localStorage
@@ -693,6 +694,7 @@ const Dashboard = () => {
     if (dailyGoal.date !== today) {
       setDailyGoal({ target: 2, completed: 0, date: today })
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
@@ -709,10 +711,12 @@ const Dashboard = () => {
           course.instructor.toLowerCase().includes(searchTerm.toLowerCase()),
       ),
     )
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm])
 
   useEffect(() => {
     checkAchievements()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [points, streak, certificates.length])
 
   const checkAchievements = () => {
